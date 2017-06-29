@@ -1,13 +1,15 @@
-var words = ["ground", "control", "to", "major", "tom"];
+var words = ["ground", "control", "to", "major", "tom", 'david', 'bowie'];
 
 function map(array, callback) {
-  var emptyArray = [];
+  var arrayOfLengths = [];
   for (var i of words) {
-    emptyArray.push(callback(i))
+    arrayOfLengths.push(callback(i))
   }
-  console.log(emptyArray);
+  return arrayOfLengths;
 }
 
-map (words, function (word) {
+var showLengths = map (words, function (word) {
   return word.length;
 })
+
+console.log(showLengths);
