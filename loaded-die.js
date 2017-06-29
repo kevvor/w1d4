@@ -1,7 +1,6 @@
 function makeLoadedDie() {
   var list = [5, 4, 6, 1, 6, 4, 2, 3, 3, 5];
-  var listId = -1;
-  /* your code here */
+  var listId = -1; // start at -1 to log first value of array[0]
 
   return function() {
        listId += 1;
