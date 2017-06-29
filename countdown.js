@@ -1,19 +1,19 @@
-var countdownGenerator = function (x) {
-  var countdownId = x + 1;
+var countdownGenerator = function (start) {
+  var countdownId = start + 1;
   var blastoff = 'Blast Off!'
-  var gone = 'Rockets already gone, bub!'
+  var rocketgone = 'Rockets already gone, bub!'
 
-  return function () {
+  return function (){
     countdownId -= 1;
-    var tminus = 'T-minus ' + countdownId + '...';
+    var tMinus = 'T-minus ' + countdownId + '...';
     if (countdownId === 0) {
       console.log(blastoff);
       return blastoff;
     } else if (countdownId < 0){
-      console.log(gone)
-      return gone;
+      console.log(rocketgone)
+      return rocketgone;
     }
-    console.log(tminus);
+    console.log(tMinus);
     return countdownId;
   }
 };
