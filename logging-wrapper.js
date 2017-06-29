@@ -1,5 +1,11 @@
 var wrapLog = function (callback, name) {
-  /* your code here */
+  return function (a, b, c) {
+    var emptyArray = [];
+    for (var i of arguments)
+      emptyArray.push(i);
+    callback(a, b, c)
+      console.log(name + '(' + emptyArray + ') =>' + callback(a, b, c));
+  }
 };
 
 var area = function (x, y) {
